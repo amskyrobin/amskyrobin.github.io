@@ -1,7 +1,7 @@
 var config = {
-  entry: '/app.jsx',
+  entry: './src/app.js',
   output: {
-    path: './build',
+    path: '../',
     filename: 'bundle.js'
   },
   devtool: "source-map",
@@ -15,7 +15,7 @@ var config = {
         exclude: /(node_modules)/,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2017']
+          presets: ['react', 'es2015']
         }
       }
     ]
