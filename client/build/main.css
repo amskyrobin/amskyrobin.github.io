@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Oxygen";
+  src: url(./public/Nexa-Bold.otf);
+}
+
+@font-face {
+  font-family: "Neva-Light";
+  src: url(./public/Hero.otf);
+}
+
+body {
+  background-color: #2E2D45;
+}
+
+#title {
+  font-family: "Oxygen";
+  font-size: 68px;
+  color: ivory;
+
+}
+
+#sub-title {
+  font-family: "Neva-Light";
+  font-size: 48px;
+  color: ivory;
+}
