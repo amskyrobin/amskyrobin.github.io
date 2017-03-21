@@ -1,5 +1,11 @@
-window.onload = function() {
-  var title = document.getElementById("title");
-  title.innerText = "AMY ROBINSON: Unemployed [unemployed].  Says words."
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PortfolioContainer from './Containers/PortfolioContainer.jsx';
 
+
+window.onload = function() {
+  ReactDOM.render(
+    <PortfolioContainer />, 
+    document.getElementById('app')
+    )
 }
