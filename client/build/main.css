@@ -50,3 +50,39 @@ p {
   color: ivory;
   margin-left: 110px;
 }
+
+
+
+/*----------------------------PROJECT-------------------------*/
+
+#project-one {
+  height: 500px;
+  width: 600px;
+  background-color: red;
+
+}
+
+#photo-viewer {
+  width: 600px;
+  height: 400px;
+  background-color: white;
+}
+
+#photo-viewer img {
+  height: 400px;
+  width: 600px;
+}
+
+#thumbnail {
+  width: 590px;
+  height: 100px;
+  background-color: blue;
+}
+
+#thumbnail img {
+  height: 100px;
+  width: 90px;
+  display: block;
+  float: left;
+
+}
