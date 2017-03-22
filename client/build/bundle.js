@@ -9494,6 +9494,7 @@ var PortfolioContainer = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (PortfolioContainer.__proto__ || Object.getPrototypeOf(PortfolioContainer)).call(this, props));
 
     _this.handleThumbnailClick = _this.handleThumbnailClick.bind(_this);
+    _this.state = { tumblrData: [] };
     return _this;
   }
 
@@ -9512,7 +9513,22 @@ var PortfolioContainer = function (_React$Component) {
     }
   }, {
     key: 'tumblrRequest',
-    value: function tumblrRequest() {}
+    value: function tumblrRequest() {
+      var _this2 = this;
+
+      var request = new XMLHttpRequest();
+      request.open('GET', "https://api.tumblr.com/v2/blog/ulalalol.tumblr.com/posts/photo?api_key=Y4MWOe7dLGpGuJ60KLVgOM17kIzzvzYTQaHtLvzhPkqyKiGKZp");
+
+      request.onload = function () {
+        if (request.status !== 200) return;{
+          var jsonString = request.responseText;
+          var tumblrResponse = JSON.parse(jsonString);
+          console.log(tumblrResponse);
+          _this2.setState({ tumblrData: tumblrResponse });
+        }
+      };
+      request.send();
+    }
   }, {
     key: 'render',
     value: function render() {
@@ -9648,19 +9664,101 @@ var Project = function Project(props) {
       { id: 'project-one' },
       _react2.default.createElement(
         'div',
-        { id: 'photo-viewer' },
+        { className: 'photo-viewer' },
         _react2.default.createElement('a', { href: 'http://i.imgur.com/exxUR4p.png' }),
         _react2.default.createElement('img', { id: 'focus-photo', src: 'http://i.imgur.com/exxUR4p.png' })
       ),
       _react2.default.createElement(
         'div',
-        { id: 'thumbnail', onClick: props.handleThumbnailClick },
+        { className: 'thumbnail', onClick: props.handleThumbnailClick },
         _react2.default.createElement('a', { href: 'http://i.imgur.com/exxUR4p.png' }),
         _react2.default.createElement('img', { src: 'http://i.imgur.com/exxUR4p.png' }),
         _react2.default.createElement('a', { href: 'http://i.imgur.com/QSwARvs.png' }),
         _react2.default.createElement('img', { src: 'http://i.imgur.com/QSwARvs.png' }),
         _react2.default.createElement('a', { href: 'http://i.imgur.com/rmXMhvm.png' }),
         _react2.default.createElement('img', { src: 'http://i.imgur.com/rmXMhvm.png' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'project-text' },
+        _react2.default.createElement(
+          'p',
+          null,
+          'FINAL BOSS - An Inventory Management App for Game Shop Owners'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'Written in Ruby with a PSQL database and a light layer of CSS. FEATURES: CRUD actions on the inventory with any changes reflected in the inventory table.  '
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'project-two' },
+      _react2.default.createElement(
+        'div',
+        { className: 'photo-viewer' },
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/iPCroTV.jpg' }),
+        _react2.default.createElement('img', { className: 'focus-photo', src: 'http://i.imgur.com/iPCroTV.jpg' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'thumbnail', onClick: props.handleThumbnailClick },
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/iPCroTV.jpg' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/iPCroTV.jpg' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/VDkxULI.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/VDkxULI.png' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/g22ZZ5T.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/g22ZZ5T.png' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'project-two-text' },
+        _react2.default.createElement(
+          'p',
+          null,
+          'FORGET ME NOT - A To Do List Application in Android'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'FEATURES: Add a task as well as task details to the main task list. Save tasks using shared preferences and view all previously saved tasks. Swipe navigation.  '
+        )
+      )
+    ),
+    _react2.default.createElement(
+      'div',
+      { id: 'project-three' },
+      _react2.default.createElement(
+        'div',
+        { className: 'photo-viewer' },
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/Mex9eQX.png' }),
+        _react2.default.createElement('img', { className: 'focus-photo', src: 'http://i.imgur.com/Mex9eQX.png' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { className: 'thumbnail', onClick: props.handleThumbnailClick },
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/Sm0R5it.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/Sm0R5it.png' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/Mex9eQX.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/Mex9eQX.png' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/qLzGJej.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/qLzGJej.png' })
+      ),
+      _react2.default.createElement(
+        'div',
+        { id: 'project-two-text' },
+        _react2.default.createElement(
+          'p',
+          null,
+          'GROUP PROJECT: DIVER DASHBOARD - an application tailored for a submariners written in vanilla javaScript'
+        ),
+        _react2.default.createElement(
+          'p',
+          null,
+          'FEATURES: journal which handles CRUD actions through communicating with its related database.  Displays previous time stamped entries in a dropdown. Access to Google news API with information displayed in a content viewer. Acess to Google Maps API to displau current location of user.  Date and time widget which continually updates. Sonar sound and Minesweeper for ultimate imersion.  '
+        )
       )
     )
   );

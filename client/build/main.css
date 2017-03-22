@@ -89,26 +89,27 @@ p {
   height: 520px;
   width: 600px; 
   margin-left: 70px;
+  padding-bottom: 50px;
 
 }
 
-#photo-viewer {
+.photo-viewer {
   width: 600px;
   height: 400px;
   background-color: white;
 }
 
-#photo-viewer img {
+.photo-viewer img {
   height: 400px;
   width: 600px;
 }
 
-#thumbnail {
+.thumbnail {
   width: 590px;
   height: 100px;
 }
 
-#thumbnail img {
+.thumbnail img {
   height: 100px;
   width: 150px;
   display: block;
@@ -117,3 +118,75 @@ p {
   margin-top: 10px;
 
 }
+
+#project-text {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  left: 600px;
+  bottom: 500px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+#project-text p {
+  margin: 0px;
+  margin-left: 20px;
+  font-family: 'OxygenBold';
+  padding-bottom: 10px;
+}
+
+#project-text p:nth-of-type(2n) {
+  margin: 0px;
+  margin-left: 20px;
+  font-family: 'Oxygen';
+  color: #1c1a45;
+  font-size: 20px;
+}
+
+
+#project-two {
+  height: 520px;
+  width: 600px; 
+  margin-left: 70px;
+  padding-bottom: 50px;
+
+}
+
+#project-two-text {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  left: 600px;
+  bottom: 500px;
+  margin: 0px;
+  overflow: hidden;
+  text-align: left;
+
+}
+
+#project-two-text p {
+  margin: 0px;
+  margin-left: 20px;
+  font-family: 'OxygenBold';
+  padding-bottom: 10px;
+}
+
+#project-two-text p:nth-of-type(2n) {
+  margin: 0px;
+  margin-left: 20px;
+  font-family: 'Oxygen';
+  color: #1c1a45;
+  font-size: 20px;
+}
+
+#project-three {
+  height: 520px;
+  width: 600px; 
+  margin-left: 70px;
+  padding-bottom: 50px;
+
+}
+
