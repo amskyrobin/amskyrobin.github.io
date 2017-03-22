@@ -9497,6 +9497,7 @@ var PortfolioContainer = function (_React$Component) {
 
       if (event.target.tagName == "img") {
         focusPicture.src = event.target.src;
+        console.log("im being clicked");
       }
     }
   }, {
