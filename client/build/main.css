@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Oxygen";
-  src: url(./public/Nexa-Bold.otf);
+  src: url(./public/Oxygen.otf);
 }
 
 @font-face {
@@ -8,8 +8,13 @@
   src: url(./public/Hero.otf);
 }
 
+@font-face {
+  font-family: "OxygenBold";
+  src: url(./public/Oxygen-Bold.otf);
+}
+
 body {
-  background-color: #acaac5;
+  background-image: url(http://i.imgur.com/NmPdHDb.png);
 }
 
 /*----------------------------- HEADER----------------------------*/
@@ -18,47 +23,72 @@ body {
 #header {
   width: 100%;
   height:80px;
-  background-color: red;
   padding: 0px;
   margin: 0px;
+  opacity: 0.2;
 }
 
 #header ul {
   text-align: right;
+  margin: none;
 }
 
 #header ul li {
   text-decoration: none;
   display: inline;
   margin-right: 80px;
+  color: ivory;
+  font-family: 'Neva-Light';
 }
 
 
 /*---------------------TITLE SCREEN--------------------------*/
 
 #title {
-  font-family: "Oxygen";
+  font-family: "OxygenBold";
   font-size: 130px;
   color: ivory;
   text-align: center;
-  margin: 50px;
+  margin: 0px;
+  padding-top:100px;
 }
 
 p {
   font-family: "Oxygen";
-  font-size: 48px;
+  font-size: 27px;
   color: ivory;
-  margin-left: 110px;
+  margin: 0px ;
+  margin-left: 130px;
+  color: #adacc3;
+}
+
+#title-screen {
+  width: 100%;
+  height:700px;
+
 }
 
 
 
+
 /*----------------------------PROJECT-------------------------*/
+#project {
+  background-color: white;
+  padding-top: 20px;
+}
+
+#project h1 {
+
+  text-align: center;
+  font-family: 'OxygenBold';
+  font-size: 70px;
+  color: #1c1a45;
+}
 
 #project-one {
-  height: 500px;
-  width: 600px;
-  background-color: red;
+  height: 520px;
+  width: 600px; 
+  margin-left: 70px;
 
 }
 
@@ -76,7 +106,6 @@ p {
 #thumbnail {
   width: 590px;
   height: 100px;
-  background-color: blue;
 }
 
 #thumbnail img {
@@ -84,5 +113,7 @@ p {
   width: 150px;
   display: block;
   float: left;
+  margin-right: 10px;
+  margin-top: 10px;
 
 }

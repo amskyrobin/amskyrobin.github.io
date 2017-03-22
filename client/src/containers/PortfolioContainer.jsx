@@ -2,6 +2,8 @@ import React from 'react';
 import Header from '../Components/Header.jsx';
 import TitleScreen from '../Components/TitleScreen.jsx';
 import Project from '../Components/Project.jsx';
+import SketchBook from '../Components/SketchBook.jsx';
+import AboutMe from "../Components/AboutMe.jsx";
 
 
 class PortfolioContainer extends React.Component {
@@ -12,14 +14,20 @@ class PortfolioContainer extends React.Component {
   }
 
   handleThumbnailClick (event) {
-    const focusPicture = document.getElementById('photo-viewer')
+    const focusPicture = document.getElementById('focus-photo')
     const thumbnail = document.getElementById('thumbnail')
 
+        console.log("im being clicked - " + event.target.src)
  
-      if(event.target.tagName == "img"){
+      if(event.target.tagName === "IMG"){
         focusPicture.src = event.target.src;
-        console.log("im being clicked")
+        console.log("Inside the if statement")
       }
+    }
+
+
+    tumblrRequest(){
+
     }
 
   render () {
@@ -30,6 +38,7 @@ class PortfolioContainer extends React.Component {
         <Project 
         handleThumbnailClick ={this.handleThumbnailClick}
         />
+        <SketchBook />
       </div>
       )
   }

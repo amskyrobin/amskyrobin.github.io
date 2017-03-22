@@ -4,10 +4,10 @@ var Header = function (props) {
   return (
     <div id="header">
       <ul>
-        <li>About Me</li>
-        <li>Projects</li>
-        <li>Contact</li>
-        <li>SketchBook</li>
+        <li>ABOUT ME</li>
+        <li>PROJECTS</li>
+        <li>CONTACT</li>
+        <li>SKETCHBOOK</li>
       </ul>
       
     </div>
