@@ -8,15 +8,27 @@ class PortfolioContainer extends React.Component {
 
   constructor(props){
     super(props)
+    this.handleThumbnailClick = this.handleThumbnailClick.bind(this);
   }
 
+  handleThumbnailClick (event) {
+    const focusPicture = document.getElementById('photo-viewer')
+    const thumbnail = document.getElementById('thumbnail')
+
+ 
+      if(event.target.tagName == "img"){
+        focusPicture.src = event.target.src;
+      }
+    }
 
   render () {
     return (
       <div>
         <Header />
         <TitleScreen />
-        <Project />
+        <Project 
+        handleThumbnailClick ={this.handleThumbnailClick}
+        />
       </div>
       )
   }

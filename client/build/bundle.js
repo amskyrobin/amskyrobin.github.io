@@ -9483,10 +9483,23 @@ var PortfolioContainer = function (_React$Component) {
   function PortfolioContainer(props) {
     _classCallCheck(this, PortfolioContainer);
 
-    return _possibleConstructorReturn(this, (PortfolioContainer.__proto__ || Object.getPrototypeOf(PortfolioContainer)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (PortfolioContainer.__proto__ || Object.getPrototypeOf(PortfolioContainer)).call(this, props));
+
+    _this.handleThumbnailClick = _this.handleThumbnailClick.bind(_this);
+    return _this;
   }
 
   _createClass(PortfolioContainer, [{
+    key: 'handleThumbnailClick',
+    value: function handleThumbnailClick(event) {
+      var focusPicture = document.getElementById('photo-viewer');
+      var thumbnail = document.getElementById('thumbnail');
+
+      if (event.target.tagName == "img") {
+        focusPicture.src = event.target.src;
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -9494,7 +9507,9 @@ var PortfolioContainer = function (_React$Component) {
         null,
         _react2.default.createElement(_Header2.default, null),
         _react2.default.createElement(_TitleScreen2.default, null),
-        _react2.default.createElement(_Project2.default, null)
+        _react2.default.createElement(_Project2.default, {
+          handleThumbnailClick: this.handleThumbnailClick
+        })
       );
     }
   }]);
@@ -9591,13 +9606,18 @@ var Project = function Project(props) {
       _react2.default.createElement(
         'div',
         { id: 'photo-viewer' },
-        _react2.default.createElement('img', { href: 'http://i.imgur.com/exxUR4p.png' })
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/exxUR4p.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/exxUR4p.png' })
       ),
       _react2.default.createElement(
         'div',
-        { id: 'thumbnail' },
-        _react2.default.createElement('img', { href: 'http://i.imgur.com/QSwARvs.png' }),
-        _react2.default.createElement('img', { href: 'http://i.imgur.com/rmXMhvm.png' })
+        { id: 'thumbnail', onClick: props.handleThumbnailClick },
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/exxUR4p.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/exxUR4p.png' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/QSwARvs.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/QSwARvs.png' }),
+        _react2.default.createElement('a', { href: 'http://i.imgur.com/rmXMhvm.png' }),
+        _react2.default.createElement('img', { src: 'http://i.imgur.com/rmXMhvm.png' })
       )
     )
   );
