@@ -66,7 +66,7 @@ var Project = function (props) {
         </div>
         <div id="project-two-text">
         <p>GROUP PROJECT: DIVER DASHBOARD - an application tailored for a submariners written in vanilla javaScript</p>
-        <p>FEATURES: journal which handles CRUD actions through communicating with its related database.  Displays previous time stamped entries in a dropdown. Access to Google news API with information displayed in a content viewer. Acess to Google Maps API to displau current location of user.  Date and time widget which continually updates. Sonar sound and Minesweeper for ultimate imersion.  </p>
+        <p>FEATURES: journal which handles CRUD actions through communicating with its related database.  Displays previous time stamped entries in a dropdown. Access to Google news API with information displayed in a content viewer. Access to Google Maps API to display current location of user.  Date and time widget which continually updates. Sonar sound and Minesweeper for ultimate imersion.  </p>
         </div>
       </div>
 

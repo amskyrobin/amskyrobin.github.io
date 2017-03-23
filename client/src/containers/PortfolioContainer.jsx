@@ -4,6 +4,7 @@ import TitleScreen from '../Components/TitleScreen.jsx';
 import Project from '../Components/Project.jsx';
 import SketchBook from '../Components/SketchBook.jsx';
 import AboutMe from "../Components/AboutMe.jsx";
+import Contact from "../Components/Contact.jsx";
 
 
 
@@ -50,10 +51,12 @@ class PortfolioContainer extends React.Component {
       <div>
         <Header />
         <TitleScreen />
+        <AboutMe />
         <Project 
         handleThumbnailClick ={this.handleThumbnailClick}
         />
-        <SketchBook />
+        <Contact />
+
       </div>
       )
   }
