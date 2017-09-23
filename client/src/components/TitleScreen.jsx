@@ -3,8 +3,9 @@ import React from 'react';
 var TitleScreen = function (props) {
   return (
     <div id='title-screen'>
-      <h1 id='title'>AMY ROBINSON</h1>
-      <p>unemployed [Unemployed] junior software developer - enjoys recreational javaScript </p>
+      <p>testing font </p>
+      <p> testing another font</p>
+      <p> another font is being tested</p>
     </div>
     )
 }

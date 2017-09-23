@@ -9631,8 +9631,13 @@ var Contact = function Contact(props) {
       null,
       'CONTACT'
     ),
-    _react2.default.createElement('a', { href: 'http://i.imgur.com/BCsfVt6.png' }),
-    _react2.default.createElement('img', { id: 'github-logo', src: 'http://i.imgur.com/BCsfVt6.png' })
+    _react2.default.createElement(
+      'div',
+      { id: 'github' },
+      _react2.default.createElement('a', { href: 'http://i.imgur.com/BCsfVt6.png' }),
+      _react2.default.createElement('img', { id: 'github-logo', src: 'http://i.imgur.com/BCsfVt6.png' }),
+      _react2.default.createElement('h2', null)
+    )
   );
 };
 
@@ -9866,14 +9871,19 @@ var TitleScreen = function TitleScreen(props) {
     'div',
     { id: 'title-screen' },
     _react2.default.createElement(
-      'h1',
-      { id: 'title' },
-      'AMY ROBINSON'
+      'p',
+      null,
+      'testing font '
     ),
     _react2.default.createElement(
       'p',
       null,
-      'unemployed [Unemployed] junior software developer - enjoys recreational javaScript '
+      ' testing another font'
+    ),
+    _react2.default.createElement(
+      'p',
+      null,
+      ' another font is being tested'
     )
   );
 };
